@@ -290,3 +290,98 @@ Les tags les plus usités sont :
 - @see référence à d’autres méthodes/classes : @see MyClass#myMethod(prototype)
 - @since début de validité de la méthode
 - @deprecated indique la méthode va disparaître dans une version future
+
+### Héritage:
+
+L’héritage est un des principes fondamentaux de tout langage objet. 
+Il permet de baser une classe A sur une autre (notée ici B), en "récupérant" l’implémentation sans avoir à la dupliquer.
+
+```uml
+A --> B
+```
+
+En général, A aura au moins les mêmes membres (attributs et méthodes) que B.
+- On dit alors que A hérite de B
+- A dérive de B
+- A est une sous-classe de B
+- B est une super-classe de A
+
+En général, si A hérite de B, tous les membres accessibles (public, package ou protected) sur B sont accessible sur A.
+
+On parle d’héritage d’interface. En notant IA et IB l’interface de A et B (vu comme l’ensemble des membres accessibles qu’ils soient méthodes ou champs), on a IA ⊆ IB
+
+Par abus, il arrive de considérer qu’une relation d’héritage implique une relation de sous-typage. Par exemple, si A hérite de B, on pourra considérer qu’A est un sous type de B (e.g. Carré est un sous-type de Rectangle).
+
+#### Usages de l'héritage:
+
+En règle général, l’héritage permet de:
+- Spécialiser une classe. On va alors ajouter des fonctionnalités et/ou modifier le
+comportement de certaines méthodes.
+- Abstraire ou généraliser un ensemble de classes pour les regrouper au sein d’un
+même concept (qui sera abstrait ou concret @see abstraction).
+
+##### Spécialisation
+
+Au sein de la classe dérivée, tous les champs `public` et `protected` de la classe mère sont accessibles, `package` se comportant normalement. Les membres `private` de la classe mère ne sont pas accessibles depuis la classe fille.
+
+![](assets/images/heri_access.png)
+
+Toutes les méthodes peuvent être re-définies pour en changer le comportement.
+Il également possible d’en changer la visibilité, mais *uniquement pour l’augmenter,jamais la restreindre*
+
+#### Mise en oeuvre:
+
+##### Premières remarques
+En java, toute classe hérite implicitement d’Object
+
+* ***En java il n’est pas possible d’hériter de plusieurs classes***
+
+Mot clé final:  
+- Pour une classe : elle ne peut être dérivée et donc ne peut avoir de classe fille. On parlera parfois de feuille.
+- Pour une méthode : elle ne peut être redéfinie (i.e. son comportement ne peut être changé au sein d’une classe fille).
+
+#####  Classes dérivées : ce qui change du fait de l’héritage
+
+###### Déclaration
+
+Dans la déclaration de la classe fille, on utilisera simplement le mot clé
+`extends` pour indiquer un héritage suivi du nom de la classe mère.
+
+```java
+public class Safe{
+    ...
+}
+public class SafeWithCode extends Safe{
+    ...
+}
+```
+###### Constructeur et initialisation
+
+**Lors de l’instanciation d’une classe dérivée, sa classe mère est également instanciée**
+- Si rien n’est précisé, le constructeur *sans argument* de la classe mère est appelée implicitement
+- Si la classe mère ne possède pas de constructeur sans argument ou si on souhaite invoquer un autre constructeur, **un constructeur de la classe mère doit être appelé explicitement dans la première ligne de la classe dérivée**. L’appel aux
+constructeurs de la classe mère se fait à l’aide du mot-clé super
+Exemple:
+```java
+public SafeWithCode(int capacity, int code){
+    super(); //appel explicite au constructeur sans
+    argument de la classe mère Safe
+    this.code = code;
+}
+```
+Voir cette exemple:
+```java
+public SafeWithCode(int capacity, int code){
+    //appel implicite au constructeur sans
+    argument de la classe mère Safe
+    this.code = code;
+}
+```
+On obtient une erreur de compilation car la classe mère Safe ne possède pas de constructeur sans argument.
+
+On peut (et doit) donc faire référence explicitement au dit constructeur :
+```java
+public SafeWithCode(int capacity, int code){
+    super(capacity);
+    this.code = code;
+}
