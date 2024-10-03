@@ -360,7 +360,7 @@ public class SafeWithCode extends Safe{
 **Lors de l’instanciation d’une classe dérivée, sa classe mère est également instanciée**
 - Si rien n’est précisé, le constructeur *sans argument* de la classe mère est appelée implicitement
 - Si la classe mère ne possède pas de constructeur sans argument ou si on souhaite invoquer un autre constructeur, **un constructeur de la classe mère doit être appelé explicitement dans la première ligne de la classe dérivée**. L’appel aux
-constructeurs de la classe mère se fait à l’aide du mot-clé super
+constructeurs de la classe mère se fait à l’aide du mot-clé super  
 Exemple:
 ```java
 public SafeWithCode(int capacity, int code){
@@ -385,3 +385,247 @@ public SafeWithCode(int capacity, int code){
     super(capacity);
     this.code = code;
 }
+```
+Le comportement général d’un constructeur est donc :
+- Construction de l’objet parent et initialisation de ses champs via constructeur
+via un appel explicite ou implicite.
+- Initialisation des attributs spécifiques à la classe dérivée au sein du constructeur.
+
+Appel au super-constructeur soit toujours fait en premier dans le constructeur de
+la classe fille, par exemple le code suivant donnera une erreur
+Ce code ne compile pas
+```java
+public SafeWithCode(int capacity, int code){
+    this.code = code;
+    super(capacity);
+}
+```
+
+###### Appel à des membres de la classe mère depuis la classe fille
+Pour accéder à des méthodes de la mère au sein de la classe fille, on utilise le mot-clé `super`
+Par exemple: 
+```java
+super.open();
+```
+
+###### Redéfinition de méthodes
+Si leur comportement est satisfaisant, on NE LES REDÉFINIT PAS.  
+Sinon, on décrit le nouveau comportement, en redéclarant la méthode et en donnant sa nouvelle implémentation. On dira alors que la méthode est redéfinie, et on l’indiquera à l’aide du tag `@Override`.
+```java
+@Override
+public void open(int code){
+    if(this.code==code) super.open();
+    else System.err.println("Wrong code!");
+}
+```
+#### Abstraction:
+
+Certains concepts peuvent être abstraits, c’est à dire qu’ils ne sont pas *pleinement implémentés immédiatement*. Ceci est marqué en java par le mot-clé
+abstract.
+##### Abstract method
+
+Une méthode abstraite est une méthode qui n’a pas d’implémentation. 
+Elle est déclarée avec le mot-clé `abstract` et ne peut être déclarée que dans une classe abstraite.
+```java
+public abstract boolean payer(int montant);
+```
+
+##### Abstract class
+
+###### Déclaration
+*Une classe abstraite est une classe contenant au moins une méthode abstraite.*
+
+Exemple:
+```java
+public abstract class MoyenDePaiement{
+    private String nomMoyen;
+    public String getNomMoyen(){
+        return this.nomMoyen;
+    }
+    public MoyenDePaiement(String nom){
+        this.nomMoyen = nom;
+        public abstract boolean payer(int montant);
+    }
+    public abstract boolean payer(int montant);
+
+}
+```
+
+###### Heriter d’une classe abstraite: 
+
+Une classe concrète héritant d’une classe abstraite doit redéfinir toutes les méthodes abstraites de la classe mère. Si ce n’est pas le cas, la classe fille doit être déclarée abstraite.
+```java
+public class CarteVisa extends MoyenDePaiement{
+    //corps de la classe
+    //au moins une implémentation de payer
+}
+```
+
+###### Constructeur et initialisation
+
+Une classe abstraite peut (et doit, au pire implicitement) proposer un ou plusieurs constructeur(s).
+Toutefois, *une classe abstraite ne peut pas être directement instanciée par l’appel d’un tel constructeur.*  
+Le code suivant ne compile pas
+```java
+MoyenDePaiement mdp = new MoyenDePaiement("Carte Visa"); //Erreur!
+```
+##### Interface
+
+Une interface en java ne peut contenir que les éléments suivants :
+- des constantes.
+- la déclaration de méthodes avec leur signature.
+- des méthodes par défaut. 
+    - Indiquées par le mot-clé `default` et fournissant une implémentation par défaut de la méthode. 
+    - Utilisé principalement en cas d’évolution d’une interface existante lorsqu’une nouvelle méthode est ajoutée. 
+    - Si l’onajoute une méthode au sein d’une interface sans en préciser une implémentation par défaut, toute classe implémentant la précédente version de l’interface serait en erreur (car ne proposant pas d’implémentation de la dite méthode).
+- des méthodes statiques.
+- des types imbriqués. C’est à dire des classes, types énumérés ou interfaces internes.
+
+*Implicitement, toutes les méthodes d’une interface sont `public abstract` .*
+
+Une interface peut être implémentée par un classe abstraite ou concrète, spécifié par le mot-clé `implements`. 
+**Une telle classe fournit alors une implémentation de chacune des méthodes déclarées dans l’interface**
+
+Exemple:
+```java
+public interface IMoyenDePaiement{
+    payer(int montant);
+}
+```
+###### Implmentation et heritage d’une interface
+
+Notons que dans le cas d’une classe abstraite, *on ne fournira pas nécessairement,en fait, d’implémentation pour toutes les méthodes* elles peuvent être simplement déclarées abstract . 
+On parlera alors parfois de réalisation d’interface plutôt que d’implémentation.
+
+```java
+public class CarteVisa implements IMoyenDePaiement
+```
+
+* Il est bien sûr possible pour une classe de dériver d’une autre tout en en implémentant une interface. On écrira alors extends avant implements
+
+```java
+public class ClasseFille extends ClasseMere implements Interface
+```
+
+* Simulation d’héritage multiple 
+Il est possible pour une classe d’implémenter plusieurs interfaces.
+
+```java
+public class ClasseFille extends ClasseMere
+implements Interface1, Interface2, Interface3
+```
+
+* Hériter d’une interface
+Il est possible pour une interface d’étendre une autre interface.
+Le comportement est similaire à un héritage de classe, l’interface fille "récupère" les champs de l’interface mère.
+
+```java
+public interface IMoyenDePaiementAvecRemboursement extends IMoyenDePaiement{
+    public void rembourser(int montant);
+}
+```
+*L’interface `IMoyenDePaiementAvecRemboursement` définie ci-dessous ne pourra être implémentée que par des classes fournissant une implémentation des méthodes rembourser ET payer*
+
+#### Transtypage, polymorphisme et liason
+
+##### Types
+2 types de transtypage:
+- Le type reel: type réel de l’objet, c’est à dire en général le **type correspondant au constructeur auquel on a fait appel**.
+- Le type déclaré dans le cadre d’une variable faisant référence à un objet, le type
+de la variable tel qu’il a été déclaré quand la variable est déclarée.
+```java
+Safe s; //déclaration de s, type déclaré défini
+s = new SafeWithCode(10, 1234); //le type réel de s est à présent SafeWithCode
+```
+En général, ***le type réel sera considéré à l’exécution, et le type déclaré à la compilation***.
+
+##### Transtypage explicite
+1. Transtypage explicite:
+```java
+int i = 1;
+float f = (float) i;
+Safe s = (Safe) SafeWithCode(10, 1234);
+```
+
+2. Transtypage implicite:
+```java
+int i = 1;
+float f =i;
+```
+##### Transtypage sur des types non primitifs
+1. Transtypage ascendant
+
+Si A est un ancêtre de B, il est toujours possible de transtyper une référence de type B vers A
+
+En effet, en java, la relation d’héritage implique une relation de sous-typage.
+B est alors un sous type de A. Ce transtypage peut être fait implicitement.
+```java 
+Safe s;
+s = new SafeWithCode(10, 1234);
+```
+À la ligne 2, une référence de type SafeWithCode est créée en faisant appel au constructeur, puis elle est castée implicitement en Safe, qui est un ancêtre de SafeWithCode. On parle de transtypage *ascendant implicite*.
+- Safe est le type reel
+- SafeWithCode est le type déclaré
+
+De la même façon, en considérant les CarteVisa implémentant l’interface IMoyenDePaiement, on pourra écrire :
+```java
+IMoyenDePaiement imdp = new CarteVisa();
+```
+2. Transtypage descendant
+
+```java
+Safe s;
+s = new SafeWithCode(10, 1234);
+SafeWithCode sc = (SafeWithCode) s;
+```
+De tels transtypages doivent toujours être **explicites** et nécessite une certaine vigilance pour ne pas faire d’erreur
+
+```java
+Safe s = new Safe(10);
+SafeWithCode sc = (SafeWithCode) s; //Problème!
+```
+Il faut donc vérifier que le type réel de l’objet est compatible avec le type vers lequel on souhaite le caster. Cela peut être fait à l’aide de l’opérateur java `instanceof`.
+
+##### Liason
+On considère en général deux types de liaison :
+- **La liaison statique** faite au moment de la compilation. Cette liaison s’intéresse aux types déclarés et s’applique typiquement au cas de surcharge en java.
+- **La liaison tardive** faite au moment de l’exécution. Cette liaison s’intéresse aux types réels et s’applique typiquement au cas de redéfinition en java.
+
+1. Liason tardive
+* *Note*: En java, la liaison sur les redéfinitions de méthode est faite tardivement. On appliquera toujours la définition la plus proche du type réel. C’est à dire :
+- dans la classe correspondant au type réel si la méthode y a été redéfini.
+- si elle n’y a pas été redéfini, on remonte à son ancêtre et on y cherche une redéfinition.
+- ainsi de suite jusqu’à trouver une (re)définition.
+
+Exemple:
+```java
+Safe s = new SafeWithCode(10,1234);
+s.open();
+```
+Le type réel de s étant `SafeWithCode` et `open()` y étant redéfini, c’est bien le comportement défini dans `SafeWithCode` qui sera exhibé : affichage d’une erreur
+
+2. Liason statique
+```java
+public class MysteriousSafe extends Safe{
+    protected boolean opened = true;
+    public MysteriousSafe(int capacity){
+        super(capacity);
+    }
+}
+```
+Notons que la classe définit un nouvel attribut opened. Plutôt qu’une redéfinition
+de l’attribut opened de Safe, il faut le voir comme une duplication. Un objet de type `MysteriousSafe` aura deux champs nommé opened, l’un lié à Safe et initialisé à `faux`, l’autre à `MysteriousSafe` initialisé à `vrai`.
+
+```java
+Safe s = MysteriousSafe(10); //transtypage
+ascendant implicite
+System.out.println(s.opened);
+```
+Le code ci-dessus affichera `false` car la liaison est faite statiquement, et le type déclaré de s est `Safe`, qui n’a pas d’attribut opened initialisé à `vrai`.
+
+3. Accessbilite
+```java
+Safe s = SafeWithCode(10,1234); //transtypage ascendant implicite
+s.open(1234); //erreur
+```
+Il produira l’erreur The method open(int) is undefined for the type Safe. Malgré l’existence d’une telle méthode dans SafeWithCode, le compilateur vérifie son existence dans le type déclaré.
