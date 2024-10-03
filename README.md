@@ -60,7 +60,7 @@ Pour les types références, on manipule une référence à l'objet.
 
 ### L'orienté objet:
 
-## Classes et objets:
+#### Classes et objets:
 
 Classe: Modèle pour créer caractéristiques et comportements d'un objet.
 Contient 2 types de membress:
@@ -72,7 +72,7 @@ Contient 2 types de membress:
 
 Objet: Instance d'une classe.
 
-## Definition d'une classe:
+#### Definition d'une classe:
 
 Les classes sont logiquemnet regroupées dans des packages.
 
@@ -92,7 +92,7 @@ public class ClassName { // Besoin de visibilite
 
 ```
 
-### Constructeurs:
+#### Constructeurs:
 
 1. Principle:
 
@@ -142,7 +142,7 @@ Greeter (boolean fr) {
 }
 ```
 
-### Utilisaion and manipulation of objects:
+#### Utilisaion and manipulation of objects:
 
 1. Declaration:
 
@@ -208,7 +208,7 @@ System.out.println(s1 == s2); // false (car les références sont différentes)
 
 En effet, s1 et s2 représentent les objets different en mémoire meme si les valeurs sont les mêmes.
 
-#### Accessibilié
+##### Accessibilié
 
 4 types de visibilité:
 Summary
@@ -217,7 +217,7 @@ Summary
 Detail
 ![](assets/images/detail_access.png)
 
-#### Persistance
+##### Persistance
 
 1. final:
    Pour un champ, il est initialisé à la construction de l'objet et non modifiable.
@@ -247,9 +247,9 @@ System.out.println(c3.getMyId());
 Output to be `0 0 1`
 
 
-### Dialogue avec l'extérieur
+#### Dialogue avec l'extérieur
 
-#### Les sorties:
+##### Les sorties:
 
 Sortie standard: `System.out`
 - out: un champ statique de la classe `System` de type `PrintStream`
@@ -260,7 +260,7 @@ Sortie standard: `System.out`
 
 Une sortie d’erreur est également disponible : `System.err`.
 
-#### Les entrées:
+##### Les entrées:
 `Scanner`, par exemple, se manipule comme suit :
 ```java
 Scanner sc = new Scanner(System.in); //on lit l’entrée standard
@@ -273,12 +273,12 @@ System.out.println("Nous saluerons: " + i + " fois");
 sc.close();
 ```
 
-## Bonne pratique:
-### Setter, getter et checker:
+### Bonne pratique:
+#### Setter, getter et checker:
 - Le seter permet de changer la valeur de l’attribut et est nommé setAtt
 - Le geter renvoie la valeur de l’attribut et est nommé getAtt
 - Le checker est un cas particulier lorsque att est booléen. Son geter se notera isAtt
-### Documentation:
+#### Documentation:
 Les tags les plus usités sont :
 - @param décrit un paramètre d’une méthode
 - @return décrit ce que retourne une fonction
