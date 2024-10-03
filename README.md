@@ -629,3 +629,12 @@ Safe s = SafeWithCode(10,1234); //transtypage ascendant implicite
 s.open(1234); //erreur
 ```
 Il produira l’erreur The method open(int) is undefined for the type Safe. Malgré l’existence d’une telle méthode dans SafeWithCode, le compilateur vérifie son existence dans le type déclaré.
+
+Resourdre ce problème en utilisant le transtypage explicite:
+```java
+Safe s = SafeWithCode(10,1234); //transtypage
+ascendant implicite
+if (s instanceof SafeWithCode) ((SafeWithCode) s).
+open(1234);
+else System.out.println("Something very odd happened")
+```
