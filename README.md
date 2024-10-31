@@ -634,7 +634,7 @@ Resourdre ce problème en utilisant le transtypage explicite:
 ```java
 Safe s = SafeWithCode(10,1234); //transtypage
 ascendant implicite
-if (s instanceof SafeWithCode) ((SafeWithCode) s).
-open(1234);
+if (s instanceof SafeWithCode) 
+((SafeWithCode) s).open(1234);
 else System.out.println("Something very odd happened")
 ```
