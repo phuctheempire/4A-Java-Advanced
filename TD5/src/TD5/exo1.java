@@ -17,17 +17,17 @@ public class exo1 {
             KeyPair pair = generator.generateKeyPair();
             java.security.PrivateKey privateKey = pair.getPrivate();
             java.security.PublicKey publicKey = pair.getPublic();
-//            System.out.println(privateKey.toString());
-//            System.out.println(publicKey.toString());
+//            System.out.println(privateKey.getEncoded().length);
+//            System.out.println(publicKey.getEncoded().length);
             RSAPublicKey rsaPub = (RSAPublicKey)publicKey;
             BigInteger publicKeyModulus = rsaPub.getModulus();
             BigInteger publicKeyExponent = rsaPub.getPublicExponent();
-//            System.out.println("publicKeyModulus: " + publicKeyModulus);
-//            System.out.println("publicKeyExponent: " + publicKeyExponent);
+            System.out.println("publicKeyModulus: " + publicKeyModulus);
+            System.out.println("publicKeyExponent: " + publicKeyExponent);
             RSAPublicKeySpec newKey = new RSAPublicKeySpec(publicKeyModulus, publicKeyExponent);
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             PublicKey key2 = keyFactory.generatePublic(newKey);
-            System.out.println(key2.toString());
+//            System.out.println(key2.toString());
             try {
                     FileOutputStream f_o = new FileOutputStream("D:\\4A\\New folder\\4A-Java-Advanced\\TD5\\save\\Example.rsa");
             } catch (FileNotFoundException e){
