@@ -5,12 +5,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7203c1ba-4a40-4d2f-b4ab-8e5e8506c789" name="Changes" comment="Commit">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TD/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TD/TestGetNumeroEmp1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TD/TestGetNumeroEmp2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TD/TestSuiteEmp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cm/MainJunitTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/files/ExampleSerialise.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/files/ExampleSerialise2.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/singleton.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/TDSerialisable/Famille.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/TDSerialisable/Genre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/TDSerialisable/Personne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/TDSerialisable/TestFamille.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/Employe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/EmployeAmeliore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExempleLecture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExempleLectureSansErreurCompte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExemplePerso1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExemplePerso2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExemplePerso3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExempleSerDeserPerso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExempleSerialize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExempleSerializeAmeliore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExempleSimpleDeSer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExempleSimpleSer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ExempleTransient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/MaClasseFille.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/MaClasseMere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/MaClasseValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/MonSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/MonSingleton2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/ObjetSimple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/Personne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/Personne2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/Personne3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/SerDeserMaClasseFille.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/SerDeserMaClasseValidation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/SerDeserPersonne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/TestSerialiserSingleton1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD4/src/cmSerializable/TestSerialiserSingleton2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TD5/src/cmChiffrement/exo1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_13_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_13_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cm/HelloJUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cm/HelloJUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cm/JUnitAnnotationExemple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cm/JUnitAnnotationExemple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cm/JUnitParametrized.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cm/JUnitParametrized.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cm/JUnitTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cm/JUnitTest1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cm/JUnitTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cm/JUnitTest2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cm/JUnitTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cm/JUnitTestSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cm/TestJUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cm/TestJUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cm/TestUnitRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cm/TestUnitRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/.idea/libraries/junit_4_13_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/.idea/libraries/junit_4_13_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/TD3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/TD3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/src/cmFichiers/ExempleGlob.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/src/cmFichiers/ExempleGlob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/src/cmFichiers/ExemplePath.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/src/cmFichiers/ExemplePath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/src/cmFichiers/MainExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/src/cmFichiers/MainExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/src/cmFichiers/MainFichiers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/src/cmFichiers/MainFichiers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/src/cmFichiers/MainFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/src/cmFichiers/MainFileWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/src/cmFichiers/TestFileInputStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/src/cmFichiers/TestFileInputStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TD3/src/cmFichiers/TestFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TD3/src/cmFichiers/TestFileReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -31,16 +100,16 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/xuanp/Downloads/cm2-test.zip&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/xuanp/Downloads/hamcrest-core-1.3.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.JUnitTest2">
-    <configuration name="DemoArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cm.DemoArrayList" />
+  <component name="RunManager" selected="Application.TestUnitRunner">
+    <configuration name="JUnitTestSuite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cm.JUnitTestSuite" />
       <module name="TD2" />
       <extension name="coverage">
         <pattern>
@@ -52,8 +121,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DemoArrayList2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cm.DemoArrayList2" />
+    <configuration name="TestUnitRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cm.TestUnitRunner" />
       <module name="TD2" />
       <extension name="coverage">
         <pattern>
@@ -65,7 +134,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloJUnit.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JUnitParametrized" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TD2" />
       <extension name="coverage">
         <pattern>
@@ -74,29 +143,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="cm" />
-      <option name="MAIN_CLASS_NAME" value="cm.HelloJUnit" />
-      <option name="METHOD_NAME" value="testAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JUnitTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TD2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cm.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="cm" />
-      <option name="MAIN_CLASS_NAME" value="cm.JUnitTest2" />
+      <option name="MAIN_CLASS_NAME" value="cm.JUnitParametrized" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JUnitTest2.testSalutMessage1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JUnitTest2.testSalutMessage2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TD2" />
       <extension name="coverage">
         <pattern>
@@ -106,19 +159,34 @@
       </extension>
       <option name="PACKAGE_NAME" value="cm" />
       <option name="MAIN_CLASS_NAME" value="cm.JUnitTest2" />
-      <option name="METHOD_NAME" value="testSalutMessage1" />
+      <option name="METHOD_NAME" value="testSalutMessage2" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JUnitTestSuiteExemple" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TD2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="cm" />
+      <option name="MAIN_CLASS_NAME" value="cm.JUnitTestSuiteExemple" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JUnitTest2" />
-        <item itemvalue="JUnit.HelloJUnit.testAdd" />
-        <item itemvalue="Application.DemoArrayList" />
-        <item itemvalue="Application.DemoArrayList2" />
-        <item itemvalue="JUnit.JUnitTest2.testSalutMessage1" />
+        <item itemvalue="Application.TestUnitRunner" />
+        <item itemvalue="JUnit.JUnitTest2.testSalutMessage2" />
+        <item itemvalue="JUnit.JUnitTestSuiteExemple" />
+        <item itemvalue="Application.JUnitTestSuite" />
+        <item itemvalue="JUnit.JUnitParametrized" />
       </list>
     </recent_temporary>
   </component>
@@ -150,15 +218,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/cm/JUnitTest2.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/cm/DemoArrayList.java</url>
           <line>11</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

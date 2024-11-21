@@ -12,10 +12,10 @@ public class MainExample {
 		t.lecture();
 		System.out.println();
 		System.out.println("FileInputStream");
-		fis.lecture();
+		String result = fis.lecture();
+		System.out.println(result);
 		System.out.println();
 		System.out.println("FileReader avec un tableau");
 		t.lectureAvecTableau();
 	}
-
 }

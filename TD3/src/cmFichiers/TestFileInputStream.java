@@ -21,7 +21,7 @@ public class TestFileInputStream {
 			FileInputStream fis = new FileInputStream(source);
 			while ((c = (byte)fis.read()) != -1) { // voir ce qui se passe si on lit un char et non un byte
 				System.out.print((char)c+"("+c+")");
-				resultat +=c;
+				resultat += (char)c;
 			}
 			fis.close();
 			return resultat;

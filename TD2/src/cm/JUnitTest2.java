@@ -43,7 +43,7 @@ public class JUnitTest2 extends TestCase{ // mettre éventuellement extends Test
    @Test
    public void testSalutMessage2() {
       System.out.println("On est dans test salut message 2");
-      nom = "Salut " + "Bob";
+      nom = "Salut " + "A";
       assertTrue(nom.equals(printer.printSalut()));
    }
    

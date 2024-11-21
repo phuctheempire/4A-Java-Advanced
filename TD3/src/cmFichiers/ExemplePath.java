@@ -10,15 +10,15 @@ public class ExemplePath {
 
 	public static void main(String[] args) {
 		Path chemin1 = FileSystems.getDefault().getPath("c:/tmp/source.txt");
-		//Path chemin2 = new File("c:/tmp/source.txt").toPath();
-		Path chemin2 = Paths.get("tmp/source.txt"); // chemin relatif
+		Path chemin2 = new File("c:/tmp/source.txt").toPath();
+//		Path chemin2 = Paths.get("tmp/source.txt"); // chemin relatif
 		System.out.println("toString()     = " + chemin1.toString());
 		System.out.println("getFileName()  = " + chemin1.getFileName());
 		System.out.println("getRoot()      = " + chemin1.getRoot());
 		System.out.println("getName(0)     = " + chemin1.getName(0));
 		System.out.println("getNameCount() = " + chemin1.getNameCount());
 		System.out.println("getParent()    = " + chemin1.getParent());
-		System.out.println("subpath(0,2)   = " + chemin1.subpath(0,2));
+		System.out.println("subpath(0,2)   = " + chemin1.subpath(0,1));
 		System.out.println("*********");
 		System.out.println("toString()     = " + chemin2.toString());
 		System.out.println("getFileName()  = " + chemin2.getFileName());

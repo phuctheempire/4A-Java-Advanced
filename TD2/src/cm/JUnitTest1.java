@@ -9,12 +9,14 @@ import static org.junit.Assert.assertEquals;
 
 public class JUnitTest1 extends TestCase {
 
-   String nom = "Alice";	
+   String nom = "Alice";
+//   String nom1 = "Bob";
+
    PrintExemple printer = new PrintExemple(nom);
    
    @Test
    public void testPrint() {	
       System.out.println("On est dans testPrint()");    
-      assertEquals(nom, printer.print());     
+      assertEquals(nom, printer.print());
    }
 }

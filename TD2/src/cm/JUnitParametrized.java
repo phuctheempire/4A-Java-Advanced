@@ -14,6 +14,8 @@ import static org.junit.Assert.assertEquals;
 @RunWith(Parameterized.class)
 public class JUnitParametrized {
    private Integer n;
+
+   private Integer rien;
    private Boolean expectedResult;
    private TestNombrePremier nbPremier;
 
@@ -23,19 +25,20 @@ public class JUnitParametrized {
    }
 
 	
-   public JUnitParametrized(Integer _n, Boolean expectedResult) {
+   public JUnitParametrized(Integer _n, Integer _rien, Boolean expectedResult) {
       this.n = _n;
+      this.rien = _rien;
       this.expectedResult = expectedResult;
    }
 
    @Parameterized.Parameters
    public static Collection primeNumbers() {
       return Arrays.asList(new Object[][] {
-         { 2, true },
-         { 6, false },
-         { 19, true },
-         { 22, false },
-         { 23, true }
+         { 2, 0,true },
+         { 6, 0,false },
+         { 19, 0,true },
+         { 22, 0,false },
+         { 23, 0, true }
       });
    }
 

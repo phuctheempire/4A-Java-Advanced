@@ -19,6 +19,7 @@ public class TestFileReader {
 			char c ;
 			String resultat = "";
 			FileReader fichier = new FileReader(source);
+//			fichier.skip(2);
 			while ((c = (char)fichier.read()) != (char)-1) { // a tester avec et sans le (char) devant -1 pour voir les bugs
 				System.out.print(c);
 				resultat +=c;
@@ -46,7 +47,4 @@ public class TestFileReader {
 			return null;
 		}
 	}
-	
-	
-	
 }
